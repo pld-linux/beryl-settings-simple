@@ -1,4 +1,5 @@
-Summary:	simple gui configuration tool for beryl
+Summary:	Simple GUI configuration tool for beryl
+Summary(pl):	Proste graficzne narzêdzie konfiguracyjne dla beryla
 Name:		beryl-settings-simple
 Version:	0.1.99.2
 Release:	1
@@ -11,18 +12,23 @@ URL:		http://beryl-project.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake >= 1:1.9
 BuildRequires:	beryl-core-devel >= 1:0.1.99.2
-BuildRequires:	beryl-settings >= 1:0.1.99.2
+BuildRequires:	beryl-settings-bindings-devel >= 1:0.1.99.2
 BuildRequires:	gtk+2-devel >= 2:2.8.0
 BuildRequires:	intltool >= 0.35.0
 BuildRequires:	pkgconfig
-BuildRequires:	python-Pyrex
+BuildRequires:	python-pygtk-devel >= 2.0
 Requires:	beryl-core >= 1:0.1.99.2
-Requires:	beryl-settings >= 1:0.1.99.2
+Requires:	beryl-settings-bindings >= 1:0.1.99.2
+Requires:	python-pygtk-gtk >= 2.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-This package contains a simple gui configuration tool to configure
-Beryl's plugins and the composite window manager.
+This package contains a simple GUI configuration tool to configure
+beryl's plugins and the composite window manager.
+
+%description -l pl
+Ten pakiet zawiera proste graficzne narzêdzie do konfiguracji wtyczek
+i zarz±dcy okien beryla.
  
 %prep
 %setup -q
@@ -39,7 +45,7 @@ autoreconf -v --install
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-    DESTDIR=$RPM_BUILD_ROOT
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -48,4 +54,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS README
 %attr(755,root,root) %{_bindir}/beryl-settings-simple
-%{_datadir}/beryl-settings-simple/
+%{_datadir}/beryl-settings-simple
