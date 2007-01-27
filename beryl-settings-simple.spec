@@ -36,7 +36,11 @@ echo '#beryl version header' > VERSION
 echo VERSION=0.1.99.2 >> VERSION
 
 %build
-autoreconf -v --install
+%{__glib_gettextize}
+%{__intltoolize}
+%{__aclocal}
+%{__autoconf}
+%{__automake}
 %configure
 
 %{__make}
