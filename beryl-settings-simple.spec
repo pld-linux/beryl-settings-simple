@@ -1,5 +1,5 @@
 Summary:	Simple GUI configuration tool for beryl
-Summary(pl.UTF-8):   Proste graficzne narzędzie konfiguracyjne dla beryla
+Summary(pl.UTF-8):	Proste graficzne narzędzie konfiguracyjne dla beryla
 Name:		beryl-settings-simple
 Version:	0.1.9999.1
 Release:	1
