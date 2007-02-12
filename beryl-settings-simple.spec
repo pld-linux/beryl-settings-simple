@@ -1,5 +1,5 @@
 Summary:	Simple GUI configuration tool for beryl
-Summary(pl):	Proste graficzne narzêdzie konfiguracyjne dla beryla
+Summary(pl.UTF-8):   Proste graficzne narzÄ™dzie konfiguracyjne dla beryla
 Name:		beryl-settings-simple
 Version:	0.1.9999.1
 Release:	1
@@ -26,9 +26,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 This package contains a simple GUI configuration tool to configure
 beryl's plugins and the composite window manager.
 
-%description -l pl
-Ten pakiet zawiera proste graficzne narzêdzie do konfiguracji wtyczek
-i zarz±dcy okien beryla.
+%description -l pl.UTF-8
+Ten pakiet zawiera proste graficzne narzÄ™dzie do konfiguracji wtyczek
+i zarzÄ…dcy okien beryla.
 
 %prep
 %setup -q
