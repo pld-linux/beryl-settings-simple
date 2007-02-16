@@ -11,14 +11,14 @@ Source0:	http://releases.beryl-project.org/%{version}/%{name}-%{version}.tar.bz2
 URL:		http://beryl-project.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake >= 1:1.9
-BuildRequires:	beryl-core-devel >= 1:0.1.9999.1
-BuildRequires:	beryl-settings-bindings-devel >= 1:0.1.9999.1
+BuildRequires:	beryl-core-devel >= 1:%{version}
+BuildRequires:	beryl-settings-bindings-devel >= 1:%{version}
 BuildRequires:	gtk+2-devel >= 2:2.8.0
 BuildRequires:	intltool >= 0.35.0
 BuildRequires:	pkgconfig
 BuildRequires:	python-pygtk-devel >= 2.0
-Requires:	beryl-core >= 1:0.1.9999.1
-Requires:	beryl-settings-bindings >= 1:0.1.9999.1
+Requires:	beryl-core >= 1:%{version}
+Requires:	beryl-settings-bindings >= 1:%{version}
 Requires:	python-pygtk-gtk >= 2.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -33,7 +33,7 @@ i zarządcy okien beryla.
 %prep
 %setup -q
 echo '#beryl version header' > VERSION
-echo VERSION=0.1.9999.1 >> VERSION
+echo VERSION=0.1.9999.2 >> VERSION
 
 %build
 %{__glib_gettextize}
@@ -42,7 +42,6 @@ echo VERSION=0.1.9999.1 >> VERSION
 %{__autoconf}
 %{__automake}
 %configure
-
 %{__make}
 
 %install
@@ -50,6 +49,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
 %find_lang %{name}
 
 %clean
