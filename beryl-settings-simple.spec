@@ -1,13 +1,13 @@
 Summary:	Simple GUI configuration tool for beryl
 Summary(pl.UTF-8):	Proste graficzne narzędzie konfiguracyjne dla beryla
 Name:		beryl-settings-simple
-Version:	0.1.9999.2
+Version:	0.2.0
 Release:	1
 Epoch:		1
 License:	GPL v2+
 Group:		X11/Window Managers/Tools
 Source0:	http://releases.beryl-project.org/%{version}/%{name}-%{version}.tar.bz2
-# Source0-md5:	3cfad6c9427c86153a06b0adb45ba9b8
+# Source0-md5:	a557d74b258e30a26efa6c36d56db00d
 URL:		http://beryl-project.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake >= 1:1.9
@@ -33,7 +33,18 @@ i zarządcy okien beryla.
 %prep
 %setup -q
 echo '#beryl version header' > VERSION
-echo VERSION=0.1.9999.2 >> VERSION
+echo VERSION=0.2.0 >> VERSION
+mv -f po/{hu_HU,hu}.po
+cat > po/LINGUAS <<EOF
+ca
+es
+es_AR
+hu
+nl
+zh_CN
+zh_HK
+zh_TW
+EOF
 
 %build
 %{__glib_gettextize}
