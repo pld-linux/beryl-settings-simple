@@ -1,0 +1,10 @@
+diff -urN beryl-settings-simple-0.2.0/beryl-settings-simple.desktop beryl-settings-simple-0.2.0.new/beryl-settings-simple.desktop
+--- beryl-settings-simple-0.2.0/beryl-settings-simple.desktop	2007-01-21 23:17:39.000000000 +0100
++++ beryl-settings-simple-0.2.0.new/beryl-settings-simple.desktop	2007-03-17 16:34:22.000000000 +0100
+@@ -5,5 +5,5 @@
+ Icon=beryl-settings.svg
+ Terminal=false
+ Type=Application
+-Categories=System;Application;X-Fedora;
++Categories=GTK;Settings;
+ Encoding=UTF-8
