@@ -20,6 +20,7 @@ BuildRequires:	pkgconfig
 BuildRequires:	python-pygtk-devel >= 2.0
 Requires:	beryl-core >= 1:%{version}
 Requires:	beryl-settings-bindings >= 1:%{version}
+Requires:	librsvg >= 2.16
 Requires:	python-pygtk-gtk >= 2.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
